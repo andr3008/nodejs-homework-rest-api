@@ -10,7 +10,7 @@ const updateSchema = Joi.object({
 	name: Joi.string().optional(),
 	email: Joi.string().email().optional(),
 	phone: Joi.string().optional(),
-}).or("name", "email", "phone");
+});
 
 const validateCreate = async (req, res, next) => {
 	try {
